@@ -5,32 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d315376-44a4-4922-bd4e-a81b721cc3b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CollegeApp/CollegeAppApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CollegeApp/CollegeAppController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CollegeApp/CollegePlan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/showhide/ShowHideController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CollegeApp/collegeapp.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CollegeApp/collegeapp_view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/showhide/showhide-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/showhide/ShowHideApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/showhide/ShowHideApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="package-info" />
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "malekz2"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;malekz2&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/malekz2/ASE.git",
-    "accountId": "a9ca6164-19c1-476d-ac6e-b4ffe7496c41"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/malekz2/ASE.git&quot;,
+    &quot;accountId&quot;: &quot;a9ca6164-19c1-476d-ac6e-b4ffe7496c41&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -38,24 +56,82 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="325WVrPF5RPAQOoPMsAy7nkXgNz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.CollegeAppApplication.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.ShowHideApplication">
+    <configuration name="CollegeAppApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CollegeApp.CollegeAppApplication" />
+      <module name="ASE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CollegeApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ase25.ase.HelloApplication" />
+      <module name="ASE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ase25.ase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShowHideApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="showhide.ShowHideApplication" />
+      <module name="ASE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="showhide.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ShowHideApplication" />
+        <item itemvalue="Application.CollegeAppApplication" />
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -73,6 +149,9 @@
       <option name="presentableId" value="Default" />
       <updated>1756710940538</updated>
       <workItem from="1756710941294" duration="21000" />
+      <workItem from="1756873807992" duration="3147000" />
+      <workItem from="1756877454427" duration="820000" />
+      <workItem from="1757326369950" duration="1398000" />
     </task>
     <servers />
   </component>

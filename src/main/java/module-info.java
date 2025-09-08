@@ -5,4 +5,10 @@ module ase25.ase {
 
     opens ase25.ase to javafx.fxml;
     exports ase25.ase;
+
+    opens CollegeApp to javafx.fxml;
+    exports CollegeApp;
+
+    exports showhide;
+    opens showhide to javafx.fxml;
 }
