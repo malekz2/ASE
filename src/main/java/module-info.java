@@ -11,4 +11,8 @@ module ase25.ase {
 
     exports showhide;
     opens showhide to javafx.fxml;
+
+    opens piggyBank to javafx.fxml;
+    exports piggyBank;
+
 }

@@ -1,0 +1,61 @@
+/* 🌌 Aurora animated background */
+.root {
+    -fx-background-color: linear-gradient(to bottom right,
+    #1e3c72, #2a5298, #4a00e0, #8e2de2, #00c6ff, #0072ff);
+    -fx-background-radius: 20;
+    -fx-background-insets: 0;
+    -fx-padding: 20;
+}
+
+/* Glass effect container (VBox or GridPane inside) */
+.vbox, .grid-pane {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0.2, 0, 5);
+    -fx-border-color: rgba(255,255,255,0.3);
+}
+
+/* Total label */
+.label {
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 20px;
+}
+
+/* Coin input fields */
+.text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.6);
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-width: 1;
+    -fx-padding: 5 10 5 10;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: linear-gradient(to right, #00c6ff, #0072ff);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-padding: 8 15 8 15;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.3, 0, 3);
+    -fx-transition: 0.3s;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #8e2de2, #4a00e0);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Reset button special style */
+.button:focused, .button:pressed {
+    -fx-background-color: linear-gradient(to right, #ff416c, #ff4b2b);
+}
