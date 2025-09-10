@@ -18,4 +18,7 @@ module ase25.ase {
     opens billCoinGenerator to javafx.fxml;
     exports billCoinGenerator;
 
+    opens pizzaApp to javafx.fxml;
+    exports pizzaApp;
+
 }

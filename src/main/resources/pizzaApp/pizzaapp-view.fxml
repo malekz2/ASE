@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="520.0" stylesheets="@pizzaApp.css"
+            xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pizzaApp.pizzaAppController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="612.0" prefWidth="492.0" spacing="12.0">
+
+         <!-- Define non-visual objects like ToggleGroup here -->
+         <fx:define>
+            <ToggleGroup fx:id="sizeGroup"/>
+         </fx:define>
+
+         <children>
+            <HBox spacing="12" alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fx:id="imgPizza" fitHeight="48" pickOnBounds="true" preserveRatio="true" />
+                  <Label text="Build Your Pizza" styleClass="title">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+
+            <Separator />
+
+            <!-- Size -->
+            <Label text="Choose Size:" styleClass="section" />
+            <HBox spacing="10">
+               <children>
+                  <RadioButton fx:id="radSmall" text="Small" toggleGroup="$sizeGroup" />
+                  <RadioButton fx:id="radMedium" text="Medium" toggleGroup="$sizeGroup" />
+                  <RadioButton fx:id="radLarge" text="Large" toggleGroup="$sizeGroup" />
+               </children>
+            </HBox>
+
+            <!-- Crust -->
+            <Label text="Crust:" styleClass="section" />
+            <HBox spacing="10">
+               <children>
+                  <ComboBox fx:id="cmbCrust" prefWidth="280.0" />
+                  <Label text="(select crust style)" />
+               </children>
+            </HBox>
+
+            <!-- Toppings -->
+            <Label text="Toppings ($0.75 each):" styleClass="section" />
+            <GridPane hgap="8" vgap="6">
+               <columnConstraints>
+                  <ColumnConstraints percentWidth="50" />
+                  <ColumnConstraints percentWidth="50" />
+               </columnConstraints>
+               <children>
+                  <CheckBox fx:id="chkPepperoni" text="Halal Pepperoni" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                  <CheckBox fx:id="chkMushrooms" text="Mushrooms" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <CheckBox fx:id="chkOnions" text="Onions" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                  <CheckBox fx:id="chkOlives" text="Olives" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <CheckBox fx:id="chkExtraCheese" text="Extra Cheese" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                  <CheckBox fx:id="chkChicken" text="ChickenBBQ" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <CheckBox fx:id="chkPineapple" text="Pineapple" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+
+            <!-- Quantity and actions -->
+            <HBox spacing="12" alignment="CENTER_LEFT">
+               <children>
+                  <Label text="Quantity:" />
+                  <Spinner fx:id="spnQty" prefWidth="80" />
+                  <Button fx:id="btnOrder" mnemonicParsing="false" text="Order" />
+                  <Button fx:id="btnClear" mnemonicParsing="false" text="Clear" styleClass="secondary" />
+               </children>
+            </HBox>
+
+            <Separator />
+
+            <!-- Result area -->
+            <Label text="Order Summary:" styleClass="section" />
+            <TextArea fx:id="txtResult" prefHeight="180.0" wrapText="true" />
+
+            <Region VBox.vgrow="ALWAYS" />
+         </children>
+
+         <padding>
+            <Insets top="12" right="12" bottom="12" left="12" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

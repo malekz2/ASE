@@ -1,0 +1,80 @@
+/* Pizza App Theme - warm and appetizing */
+
+/* Root AnchorPane style */
+.anchor-pane {
+    -fx-background-color: linear-gradient(to bottom right, #ffefba, #ffffff);
+    -fx-padding: 18;
+}
+
+/* Main container card */
+.vbox {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 16;
+    -fx-padding: 18;
+    -fx-spacing: 12;
+    -fx-border-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 14, 0.2, 0, 6);
+}
+
+/* Title */
+.label.title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #b34000;
+}
+
+/* Section labels */
+.label.section {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6b2b00;
+}
+
+/* Radio buttons & checkboxes */
+.radio-button, .check-box {
+    -fx-font-size: 14px;
+    -fx-text-fill: #3c2b2b;
+    -fx-padding: 6 8;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-padding: 6 8;
+}
+
+/* Spinner */
+.spinner {
+    -fx-padding: 0 6;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: linear-gradient(#ff7b00, #ff4500);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+.button:disabled {
+    -fx-opacity: 0.6;
+}
+
+/* Secondary button */
+.button.secondary {
+    -fx-background-color: linear-gradient(#f0f0f0, #dcdcdc);
+    -fx-text-fill: #333333;
+    -fx-border-color: #c9c9c9;
+    -fx-border-width: 1;
+}
+
+/* TextArea result */
+.text-area {
+    -fx-control-inner-background: #fff8f0;
+    -fx-background-color: #fff8f0;
+    -fx-border-color: #ffd1a4;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-size: 13px;
+    -fx-text-fill: #4b2e00;
+}

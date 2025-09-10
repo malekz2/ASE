@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d315376-44a4-4922-bd4e-a81b721cc3b1" name="Changes" comment="started BillCoinGenerator app">
+    <list default="true" id="8d315376-44a4-4922-bd4e-a81b721cc3b1" name="Changes" comment="finished BillCoinGenerator app">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pizzaApp/PizzaOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pizzaApp/pizzaAppApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pizzaApp/pizzaAppController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pizzaApp/pizzaApp.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pizzaApp/pizzaapp-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/billCoinGenerator/billCoinGenerator-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/billCoinGenerator/billCoinGenerator-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,12 +70,13 @@
     "Application.PiggyBankApplication.executor": "Run",
     "Application.ShowHideApplication.executor": "Run",
     "Application.piggybank.PiggyBankApplication.executor": "Run",
+    "Application.pizzaAppApplication.executor": "Run",
     "Application.showhide.PiggyBankApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/malekzuhdi/IdeaProjects/ASE/src/main/resources",
+    "last_opened_file_path": "/Users/malekzuhdi/IdeaProjects/ASE/src/main/resources/pizzaApp",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -83,11 +88,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/pizzaApp" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/PiggyBank" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pizzaApp" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.BillCoinGeneratorApplication">
+  <component name="RunManager" selected="Application.pizzaAppApplication">
     <configuration name="BillCoinGeneratorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="billCoinGenerator.BillCoinGeneratorApplication" />
       <module name="ASE" />
@@ -140,12 +150,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="showhide.PiggyBankApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="showhide.PiggyBankApplication" />
+    <configuration name="pizzaAppApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pizzaApp.pizzaAppApplication" />
       <module name="ASE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="showhide.*" />
+          <option name="PATTERN" value="pizzaApp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.pizzaAppApplication" />
         <item itemvalue="Application.BillCoinGeneratorApplication" />
         <item itemvalue="Application.PiggyBankApplication" />
         <item itemvalue="Application.piggybank.PiggyBankApplication" />
         <item itemvalue="Application.ShowHideApplication" />
-        <item itemvalue="Application.showhide.PiggyBankApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +193,7 @@
       <workItem from="1756873807992" duration="3147000" />
       <workItem from="1756877454427" duration="820000" />
       <workItem from="1757326369950" duration="3841000" />
-      <workItem from="1757494600550" duration="682000" />
+      <workItem from="1757494600550" duration="2842000" />
     </task>
     <task id="LOCAL-00001" summary="finished showHide application">
       <option name="closed" value="true" />
@@ -209,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757494820339</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finished BillCoinGenerator app">
+      <option name="closed" value="true" />
+      <created>1757495606609</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1757495606613</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +237,7 @@
     <MESSAGE value="finished showHide application" />
     <MESSAGE value="finished piggy bank application" />
     <MESSAGE value="started BillCoinGenerator app" />
-    <option name="LAST_COMMIT_MESSAGE" value="started BillCoinGenerator app" />
+    <MESSAGE value="finished BillCoinGenerator app" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished BillCoinGenerator app" />
   </component>
 </project>
