@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="billCoinGenerator.BillCoinGeneratorController">
+
+    <top>
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="BillCoinGenerator" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+            <Label text="Enter a total amount and calculate the bill/coin breakdown." />
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10" padding="15">
+            <HBox spacing="10">
+                <Label text="Enter total amount:"/>
+                <TextField fx:id="amountField" promptText="e.g. 234.40"/>
+                <Button fx:id="calculateButton" text="Calculate" onAction="#onCalculateClicked"/>
+            </HBox>
+
+            <Label fx:id="billAmountLabel" text="Total bill amount:"/>
+            <Label fx:id="coinAmountLabel" text="Total coins in cents:"/>
+
+            <Separator/>
+
+            <Label text="Bill break down" style="-fx-font-weight: bold;"/>
+            <Label fx:id="tenDollarLabel" text="Number 10 dollar bills:"/>
+            <Label fx:id="fiveDollarLabel" text="Number 5 dollar bills:"/>
+            <Label fx:id="oneDollarLabel" text="Number 1 dollar bills:"/>
+
+            <Separator/>
+
+            <Label text="Coin break down" style="-fx-font-weight: bold;"/>
+            <Label fx:id="quartersLabel" text="Number of quarters:"/>
+            <Label fx:id="dimesLabel" text="Number of dimes:"/>
+            <Label fx:id="nickelsLabel" text="Number of nickels:"/>
+            <Label fx:id="penniesLabel" text="Number of pennies:"/>
+        </VBox>
+    </center>
+</BorderPane>
