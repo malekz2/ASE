@@ -15,4 +15,7 @@ module ase25.ase {
     opens piggyBank to javafx.fxml;
     exports piggyBank;
 
+    opens billCoinGenerator to javafx.fxml;
+    exports billCoinGenerator;
+
 }

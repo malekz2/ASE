@@ -15,7 +15,11 @@
     </top>
 
     <center>
-        <VBox spacing="10" padding="15">
+        <VBox spacing="10">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
             <HBox spacing="10">
                 <Label text="Enter total amount:"/>
                 <TextField fx:id="amountField" promptText="e.g. 234.40"/>
@@ -41,4 +45,7 @@
             <Label fx:id="penniesLabel" text="Number of pennies:"/>
         </VBox>
     </center>
+
+
+
 </BorderPane>
