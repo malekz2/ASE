@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d315376-44a4-4922-bd4e-a81b721cc3b1" name="Changes" comment="finished BillCoinGenerator app">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pizzaApp/PizzaOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pizzaApp/pizzaAppApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pizzaApp/pizzaAppController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pizzaApp/pizzaApp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pizzaApp/pizzaapp-view.fxml" afterDir="false" />
+    <list default="true" id="8d315376-44a4-4922-bd4e-a81b721cc3b1" name="Changes" comment="finished Pizza Order app">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +17,9 @@
       <list>
         <option value="package-info" />
         <option value="CSS File" />
-        <option value="JavaFXApplication" />
         <option value="Class" />
         <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
       </list>
     </option>
   </component>
@@ -193,7 +187,7 @@
       <workItem from="1756873807992" duration="3147000" />
       <workItem from="1756877454427" duration="820000" />
       <workItem from="1757326369950" duration="3841000" />
-      <workItem from="1757494600550" duration="2842000" />
+      <workItem from="1757494600550" duration="3223000" />
     </task>
     <task id="LOCAL-00001" summary="finished showHide application">
       <option name="closed" value="true" />
@@ -227,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757495606613</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finished Pizza Order app">
+      <option name="closed" value="true" />
+      <created>1757497990492</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1757497990492</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +240,7 @@
     <MESSAGE value="finished piggy bank application" />
     <MESSAGE value="started BillCoinGenerator app" />
     <MESSAGE value="finished BillCoinGenerator app" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished BillCoinGenerator app" />
+    <MESSAGE value="finished Pizza Order app" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished Pizza Order app" />
   </component>
 </project>
