@@ -21,4 +21,7 @@ module ase25.ase {
     opens pizzaApp to javafx.fxml;
     exports pizzaApp;
 
+    opens textOrNumber to javafx.fxml;
+    exports textOrNumber;
+
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="textOrNumber.textOrNumberController">
+
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <Label text="Enter text or number:" style="-fx-font-size: 16px;"/>
+            <TextField fx:id="inputField" promptText="Type here..."/>
+            <Button fx:id="checkButton" text="Check" onAction="#onCheckButtonClick"/>
+            <Label fx:id="resultLabel" text="" style="-fx-font-size: 14px; -fx-text-fill: #333;"/>
+        </VBox>
+    </center>
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+</BorderPane>
