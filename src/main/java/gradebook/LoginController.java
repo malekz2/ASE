@@ -40,7 +40,6 @@ public class LoginController {
             new Alert(Alert.AlertType.ERROR) {{ setTitle("Error"); setHeaderText(null); setContentText("Login Failed"); }}.showAndWait();
         }
     }
-
     @FXML
     private void lblClckSignUp() {
         try {
