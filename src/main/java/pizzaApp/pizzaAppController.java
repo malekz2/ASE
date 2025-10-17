@@ -12,6 +12,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+// add imports:
+import app.SecurityContext;
+import gradebook.models.User;
+import javafx.application.Platform;
+import app.SceneNavigator;
+import app.SecurityContext;
+
+// add field:
+
 /**
  * Controller for Pizza App
  */
@@ -35,6 +44,9 @@ public class pizzaAppController {
     @FXML private CheckBox chkChicken;
     @FXML private CheckBox chkPineapple;
 
+    @FXML private Button btnLogout;
+
+
     // Quantity
     @FXML private Spinner<Integer> spnQty;
 
@@ -50,6 +62,9 @@ public class pizzaAppController {
 
     // Model
     private PizzaOrder currentOrder;
+
+    private final OrderService orderService = new OrderService();
+
 
     @FXML
     private void initialize() {
@@ -86,6 +101,13 @@ public class pizzaAppController {
             sizeGroup.selectedToggleProperty().addListener((obs, oldToggle, newToggle) -> {
                 updateSizeFromToggle(newToggle);
                 updateSummaryAndPrice();
+            });
+        }
+
+        if (btnLogout != null) {
+            btnLogout.setOnAction(e -> {
+                SecurityContext.clear();
+                try { SceneNavigator.goToLogin(); } catch (Exception ignored) {}
             });
         }
 
@@ -131,6 +153,14 @@ public class pizzaAppController {
         currentOrder.setCrust(cmbCrust != null ? cmbCrust.getValue() : "Thin Crust");
         updateToppingsFromCheckboxes();
         updateSummaryAndPrice();
+        Platform.runLater(() -> {
+            User u = SecurityContext.get();
+            boolean canOrder = (u != null && u.getRole().name().equals("CUSTOMER"));
+            if (btnOrder != null) btnOrder.setDisable(!canOrder);
+            if (!canOrder && txtResult != null) {
+                txtResult.appendText("\n\nLogin as CUSTOMER to place orders.");
+            }
+        });
     }
 
     private void updateSizeFromToggle(Toggle selected) {
@@ -141,6 +171,49 @@ public class pizzaAppController {
         } else if (selected == radLarge) {
             currentOrder.setSize(PizzaOrder.Size.LARGE);
         }
+    }
+
+    private void placeOrder() {
+        User u = SecurityContext.get();
+        if (u == null) {
+            new Alert(Alert.AlertType.ERROR) {{ setTitle("Not logged in"); setHeaderText(null); setContentText("Please log in as a CUSTOMER."); }}.showAndWait();
+            return;
+        }
+
+        // Compute totals (existing code)
+        double subtotal = currentOrder.calculateSubtotal();
+        double tax = currentOrder.calculateTax(subtotal);
+        double total = subtotal + tax;
+
+        Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
+        confirm.setTitle("Confirm Order");
+        confirm.setHeaderText("Place your pizza order?");
+        confirm.setContentText("Total: " + NumberFormat.getCurrencyInstance(Locale.US).format(total) + "\n\nPress OK to confirm.");
+
+        confirm.showAndWait().ifPresent(response -> {
+            if (response == ButtonType.OK) {
+                // NEW: save to DB
+                int id = orderService.placeOrder(u.getUsername(), currentOrder);
+
+                StringBuilder receipt = new StringBuilder();
+                receipt.append("✅ Order Placed! (Order #").append(id).append(")\n");
+                receipt.append("---------------------\n");
+                receipt.append(txtResult.getText()).append("\n\n");
+                receipt.append("Thank you! Your pizza will be prepared shortly. 🍕");
+
+                Alert done = new Alert(Alert.AlertType.INFORMATION);
+                done.setTitle("Order Complete");
+                done.setHeaderText("Order successfully placed");
+                TextArea ta = new TextArea(receipt.toString());
+                ta.setEditable(false);
+                ta.setWrapText(true);
+                ta.setPrefRowCount(12);
+                done.getDialogPane().setContent(ta);
+                done.showAndWait();
+
+                if (spnQty != null) spnQty.getValueFactory().setValue(1);
+            }
+        });
     }
 
     private void updateToppingsFromCheckboxes() {
@@ -174,50 +247,11 @@ public class pizzaAppController {
         sb.append(String.format("Subtotal: %s\n", nf.format(subtotal)));
         sb.append(String.format("Tax (%.0f%%): %s\n", currentOrder.getTaxRate()*100, nf.format(tax)));
         sb.append(String.format("Total: %s\n", nf.format(total)));
-        sb.append("\n(Click ORDER to finalize — this demo does not send the order anywhere.)");
+        sb.append("\n(Click ORDER to finalize)");
 
         txtResult.setText(sb.toString());
     }
 
-    private void placeOrder() {
-        // final confirmation dialog
-        double subtotal = currentOrder.calculateSubtotal();
-        double tax = currentOrder.calculateTax(subtotal);
-        double total = subtotal + tax;
-        NumberFormat nf = NumberFormat.getCurrencyInstance(Locale.US);
-
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirm Order");
-        alert.setHeaderText("Place your pizza order?");
-        alert.setContentText("Total: " + nf.format(total) + "\n\nPress OK to confirm.");
-
-        alert.showAndWait().ifPresent(response -> {
-            if (response == ButtonType.OK) {
-                // Pretend to place order: append a friendly message and clear quantity to 1
-                StringBuilder receipt = new StringBuilder();
-                receipt.append("✅ Order Placed!\n");
-                receipt.append("---------------------\n");
-                receipt.append(txtResult.getText()).append("\n\n");
-                receipt.append("Thank you! Your pizza will be prepared shortly. 🍕");
-
-                // Show receipt in information dialog
-                Alert done = new Alert(Alert.AlertType.INFORMATION);
-                done.setTitle("Order Complete");
-                done.setHeaderText("Order successfully placed");
-                TextArea ta = new TextArea(receipt.toString());
-                ta.setEditable(false);
-                ta.setWrapText(true);
-                ta.setPrefRowCount(10);
-                done.getDialogPane().setContent(ta);
-                done.showAndWait();
-
-                // Reset quantity to 1
-                if (spnQty != null) spnQty.getValueFactory().setValue(1);
-                // Optionally clear toppings (comment out if you prefer keep selection)
-                // clearToppings();
-            }
-        });
-    }
 
     private void clearOrder() {
         if (spnQty != null) spnQty.getValueFactory().setValue(1);

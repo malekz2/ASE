@@ -18,6 +18,15 @@
          </fx:define>
 
          <children>
+            <!-- Top bar with Logout -->
+            <ToolBar>
+               <Label text="🍕 Pizza Delivery" styleClass="title"/>
+               <Pane HBox.hgrow="ALWAYS"/>
+               <Button fx:id="btnLogout" text="Logout"/>
+            </ToolBar>
+
+            <Separator/>
+
             <HBox spacing="12" alignment="CENTER_LEFT">
                <children>
                   <ImageView fx:id="imgPizza" fitHeight="48" pickOnBounds="true" preserveRatio="true" />

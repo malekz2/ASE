@@ -35,6 +35,8 @@ javafx {
 }
 
 dependencies {
+  jdbc:sqlite:/Users/malekzuhdi/IdeaProjects/ASE/src/main/resources/databases/studentInfo.db
+
 
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")

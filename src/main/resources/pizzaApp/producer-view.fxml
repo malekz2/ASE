@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pizzaApp.ProducerController"
+            prefWidth="820" prefHeight="520"
+            stylesheets="@pizzaApp.css">
+
+    <top>
+        <ToolBar>
+            <Label text="🍕 Producer Dashboard" styleClass="title" />
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button text="Refresh" onAction="#onRefresh"/>
+            <Button text="Logout" onAction="#onLogout"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <TableView fx:id="tblOrders">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+                <TableColumn fx:id="colUser" text="Customer" prefWidth="120"/>
+                <TableColumn fx:id="colSize" text="Size" prefWidth="80"/>
+                <TableColumn fx:id="colCrust" text="Crust" prefWidth="140"/>
+                <TableColumn fx:id="colToppings" text="Toppings" prefWidth="220"/>
+                <TableColumn fx:id="colQty" text="Qty" prefWidth="60"/>
+                <TableColumn fx:id="colTotal" text="Total" prefWidth="90"/>
+                <TableColumn fx:id="colWhen" text="Created" prefWidth="140"/>
+                <TableColumn fx:id="colActions" text="Actions" prefWidth="160"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
